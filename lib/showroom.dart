@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:carrental/constants.dart';
 import 'package:carrental/data.dart';
@@ -72,6 +74,52 @@ class _ShowroomState extends State<Showroom> {
               ),
             ),
           ),
+          Expanded(
+            child: SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[100],
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(16),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'TOP DEALS',
+                            style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.grey[400],
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "TOP DEALS",
+                                style: TextStyle(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey[400],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
